@@ -1,9 +1,22 @@
-<!doctype html>
-<html class="theme-next ">
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next muse use-motion" lang="">
 <head>
   <meta charset="UTF-8"/>
-<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
 
 
 
@@ -25,20 +38,43 @@
 
 
 
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
 
-<link href="//font-awesome/css/font-awesome.min.css?v=4.4.0" rel="stylesheet" type="text/css" />
 
-<link href="//main.css?v=" rel="stylesheet" type="text/css" />
 
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css" />
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=5.1.4">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=5.1.4" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="Hexo, NexT" />
 
 
 
 
 
   <link rel="alternate" href="/atom.xml" title="碗曰" type="application/atom+xml" />
-
-
-
 
 
 
@@ -57,95 +93,157 @@
 
 
 
-<script type="text/javascript" id="hexo.configuration">
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
   var CONFIG = {
-    scheme: '',
-    sidebar: '',
-    motion: 
+    root: '/',
+    scheme: 'Muse',
+    version: '5.1.4',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: 'Author'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
   };
 </script>
 
-  <title> 碗曰 </title>
+
+
+  <link rel="canonical" href="http://bigbowl.me/"/>
+
+
+
+
+
+  <title>碗曰</title>
+  
+
+
+
+
+
+
+
+
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="">
 
-  <!--[if lte IE 8]>
-  <div style=' clear: both; height: 59px; padding:0 0 0 15px; position: relative;margin:0 auto;'>
-    <a href="http://windows.microsoft.com/en-US/internet-explorer/products/ie/home?ocid=ie6_countdown_bannercode">
-      <img src="http://7u2nvr.com1.z0.glb.clouddn.com/picouterie.jpg" border="0" height="42" width="820"
-           alt="You are using an outdated browser. For a faster, safer browsing experience, upgrade for free today or use other browser ,like chrome firefox safari."
-           style='margin-left:auto;margin-right:auto;display: block;'/>
-    </a>
-  </div>
-<![endif]-->
+  
+  
+    
   
 
-
-
-
-
-
-  <div class="container one-column 
-   page-home 
-">
+  <div class="container sidebar-position-left 
+  page-home">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
-      <div class="header-inner"><div class="site-meta ">
-  
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
 
-  <div class="custom-logo-site-title">
-    <a href="/"  class="brand" rel="start">
-      <span class="logo-line-before"><i></i></span>
-      <span class="site-title">碗曰</span>
-      <span class="logo-line-after"><i></i></span>
-    </a>
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">碗曰</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle">大火烧开，小火慢炖</p>
+      
   </div>
-  <p class="site-subtitle">大火烧开，小火慢炖</p>
-</div>
 
-<div class="site-nav-toggle">
-  <button>
-    <span class="btn-bar"></span>
-    <span class="btn-bar"></span>
-    <span class="btn-bar"></span>
-  </button>
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
 </div>
 
 <nav class="site-nav">
   
 
   
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            Startseite
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            Archiv
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
 
   
 </nav>
+
+
 
  </div>
     </header>
 
     <main id="main" class="main">
       <div class="main-inner">
-        <div id="content" class="content">
-          
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
   <section id="posts" class="posts-expand">
-
-    
-
-    
-    
-
     
       
 
   
-  
 
   
   
   
 
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://bigbowl.me/2017/06/07/books-and-flowers/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="大碗">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="碗曰">
+    </span>
 
     
       <header class="post-header">
@@ -153,24 +251,27 @@
         
         
           <h1 class="post-title" itemprop="name headline">
-            
-            
-              
                 
-                <a class="post-title-link" href="/2017/06/07/books-and-flowers/" itemprop="url">
-                  书店和花店
-                </a>
-              
-            
-          </h1>
+                <a class="post-title-link" href="/2017/06/07/books-and-flowers/" itemprop="url">书店和花店</a></h1>
         
 
         <div class="post-meta">
           <span class="post-time">
-            post.posted
-            <time itemprop="dateCreated" datetime="2017-06-07T09:03:12-07:00" content="2017-06-07">
-              2017-06-07
-            </time>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Veröffentlicht am</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-06-07T09:03:12-07:00">
+                2017-06-07
+              </time>
+            
+
+            
+
+            
           </span>
 
           
@@ -180,34 +281,52 @@
           
 
           
+          
+
+          
+
+          
+
+          
 
         </div>
       </header>
     
 
-
-    <div class="post-body">
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
 
       
       
 
       
         
-          <span itemprop="articleBody">
-            
-              <p>前几天跟几个朋友闲聊，一个朋友说，她女儿想长大了开个花店，他还挺支持的。这种支持要不得。</p>
+          
+            <p>前几天跟几个朋友闲聊，一个朋友说，她女儿想长大了开个花店，他还挺支持的。这种支持要不得。</p>
 <p>因为情怀，本质上，是感觉，不知其所以然；既然不知其所以然，就基本不靠谱。说的清楚的叫道理，说不清楚的都叫情怀了。　现在满大街的骗子，就靠情怀骗人了，比如民族产业情怀、慈善情怀、爱学习情怀、勤奋情怀、复古情怀、扬我国威情怀。　我同济的同学，也会上这种恶当，被慈善、高尚、学习型组织的情怀骗了几十万。　但凡情怀，不是骗人，就是骗己。</p>
 <p>我知道的想开花店和书店的人，不用找黄牛，也能排队排出去３８公里。　大概原因也能猜到，美啊、有品味啊、可以假装有思想啊。但实质上绝不可信。我认识的这类人，一年看书大概不超过１０本，排除小说的话，可能不超过５本，去掉鸡汤，１本也难找，还假装自己是爱读书的知识分子，看到别人说读书，就赞美；读到某个书店的文章，就转发后赞美，彷佛不转发不是上海人。我认识想开花店的人，自己房间里脏到无处下脚，凌乱到如风中狂舞，她是爱美，还是只想标榜自己爱美，可见一斑。</p>
 <p>书店，如果不是立了一个明确的愿景（比如解民智于倒悬）的话，就是个小破生意，只不过这个生意看起来是骗人情怀的，而不是骗自己的。如果你有一个明确的愿景，当然就未必是做书店，你写文字，做教育，一样有帮助。　花店自然也是如此，如果不是有明确的愿景，跟卖烟酒糖茶充气娃娃并无二致。从这个意义上讲，那些跟你说我打算开一家书店的人，都配得上装逼未遂犯的抬头。　人家吴晓波，这么有钱，宣称要把生命浪费在美好的事物上，开了家书店，一看不赚钱，瞬间就关了。按照吴老师这个逻辑，书店连美好的事物，都算不上。</p>
 <p>我有个朋友，闲的蛋疼，去了海南某书屋，做志愿者了。但是我知道他不是上当了，他是明知上当而甘愿上当。我就明白，这是逆向选择的一种技巧，毕竟他还是单身啊。</p>
 
-            
-          </span>
+          
         
       
     </div>
+    
+    
+    
+
+    
+
+    
+
+    
 
     <footer class="post-footer">
+      
+
       
 
       
@@ -217,6 +336,10 @@
         <div class="post-eof"></div>
       
     </footer>
+  </div>
+  
+  
+  
   </article>
 
 
@@ -224,13 +347,27 @@
       
 
   
-  
 
   
   
   
 
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://bigbowl.me/2017/06/05/bigleg/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="大碗">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="碗曰">
+    </span>
 
     
       <header class="post-header">
@@ -238,24 +375,27 @@
         
         
           <h1 class="post-title" itemprop="name headline">
-            
-            
-              
                 
-                <a class="post-title-link" href="/2017/06/05/bigleg/" itemprop="url">
-                  论榜大腿
-                </a>
-              
-            
-          </h1>
+                <a class="post-title-link" href="/2017/06/05/bigleg/" itemprop="url">论榜大腿</a></h1>
         
 
         <div class="post-meta">
           <span class="post-time">
-            post.posted
-            <time itemprop="dateCreated" datetime="2017-06-05T15:16:00-07:00" content="2017-06-05">
-              2017-06-05
-            </time>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Veröffentlicht am</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-06-05T15:16:00-07:00">
+                2017-06-05
+              </time>
+            
+
+            
+
+            
           </span>
 
           
@@ -265,33 +405,51 @@
           
 
           
+          
+
+          
+
+          
+
+          
 
         </div>
       </header>
     
 
-
-    <div class="post-body">
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
 
       
       
 
       
         
-          <span itemprop="articleBody">
-            
-              <p>类似神州泰岳这种公司，给了很多人想象的空间，做生意，榜大腿就够了。很多人谈起来，跟谁谁谁合作，谈成了就爽翻了，两眼放光，心驰神摇。这其实是一个典型的幸存者偏见。</p>
+          
+            <p>类似神州泰岳这种公司，给了很多人想象的空间，做生意，榜大腿就够了。很多人谈起来，跟谁谁谁合作，谈成了就爽翻了，两眼放光，心驰神摇。这其实是一个典型的幸存者偏见。</p>
 <p>有个铁钉汤的故事，说虽然我只有一个铁钉，但是你只要给我一个鸡蛋、两碗奶油、三斤牛肉汤、四颗胡萝卜…..我就能做最出全宇宙最美味的铁钉汤。说的就是这个道理，你对什么有很高的依赖度，价值就属于谁，你晃悠一根铁钉吹什么牛逼。什么？你说你厨艺超群！要不要赌一碗鸡汤，赌你厨艺排不进前１０００。</p>
 <p>当然，空手套白狼的故事，总是最精彩。子贡一出，存鲁弱齐灭吴强晋霸越；王玄策一人灭一国。就算是听听，都能心潮澎拜，高山仰止。然而，精彩的东西，　之所以精彩，它一定是小概率事件。而创业决策，就是要远离小概率事件。　历史上，更多的榜大腿的故事，结局悲催的大概是主流。因为从逻辑上讲，榜大腿意味着你缺少独立存在的价值，既然缺少独立存在的价值，则没有独立的能力，没有独立的能力，则没有独立的地位。没有独立的地位，怎么可能获得合理的收益呢？</p>
 <p>自己有产品能力、运营能力、管理能力，才能大概率做好企业。外包任何关键业务，或者任何大腿依赖行为，都不可持续。</p>
 
-            
-          </span>
+          
         
       
     </div>
+    
+    
+    
+
+    
+
+    
+
+    
 
     <footer class="post-footer">
+      
+
       
 
       
@@ -301,6 +459,10 @@
         <div class="post-eof"></div>
       
     </footer>
+  </div>
+  
+  
+  
   </article>
 
 
@@ -308,13 +470,27 @@
       
 
   
-  
 
   
   
   
 
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://bigbowl.me/2017/04/20/apple-tax/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="大碗">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="碗曰">
+    </span>
 
     
       <header class="post-header">
@@ -322,24 +498,27 @@
         
         
           <h1 class="post-title" itemprop="name headline">
-            
-            
-              
                 
-                <a class="post-title-link" href="/2017/04/20/apple-tax/" itemprop="url">
-                  苹果税收不下去
-                </a>
-              
-            
-          </h1>
+                <a class="post-title-link" href="/2017/04/20/apple-tax/" itemprop="url">苹果税收不下去</a></h1>
         
 
         <div class="post-meta">
           <span class="post-time">
-            post.posted
-            <time itemprop="dateCreated" datetime="2017-04-20T11:05:57-07:00" content="2017-04-20">
-              2017-04-20
-            </time>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Veröffentlicht am</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-04-20T11:05:57-07:00">
+                2017-04-20
+              </time>
+            
+
+            
+
+            
           </span>
 
           
@@ -349,35 +528,53 @@
           
 
           
+          
+
+          
+
+          
+
+          
 
         </div>
       </header>
     
 
-
-    <div class="post-body">
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
 
       
       
 
       
         
-          <span itemprop="articleBody">
-            
-              <p>Apple强制对应用内对虚拟物品的支付要求必须使用内购，来收取30%的苹果税。 这恐怕要打自己的脸，有两个原因：</p>
+          
+            <p>Apple强制对应用内对虚拟物品的支付要求必须使用内购，来收取30%的苹果税。 这恐怕要打自己的脸，有两个原因：</p>
 <ul>
 <li>第一，未来虚拟物品销售量会非常大，几乎所有的知识都是虚拟物品，电子书、音乐、电影、游戏、视频。这种30%的税率，对产业的损害非常大</li>
 <li>第二，毕竟还有Android。试想，如果你购买虚拟物品，同样的东西，iphone上定价100,Android定价70,不出一年，Apple手机用户就能减少20%。这场景很容易呈现，就腾讯、网易这些厂商联合下，就够Apple看的。</li>
 </ul>
 <p>所以，最大的可能，Apple会让步。我很怀疑，这是Apple衰退的一个转折点。</p>
 
-            
-          </span>
+          
         
       
     </div>
+    
+    
+    
+
+    
+
+    
+
+    
 
     <footer class="post-footer">
+      
+
       
 
       
@@ -387,6 +584,10 @@
         <div class="post-eof"></div>
       
     </footer>
+  </div>
+  
+  
+  
   </article>
 
 
@@ -394,13 +595,27 @@
       
 
   
-  
 
   
   
   
 
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://bigbowl.me/2017/03/15/start-up-business/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="大碗">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="碗曰">
+    </span>
 
     
       <header class="post-header">
@@ -408,24 +623,27 @@
         
         
           <h1 class="post-title" itemprop="name headline">
-            
-            
-              
                 
-                <a class="post-title-link" href="/2017/03/15/start-up-business/" itemprop="url">
-                  创业是场修行
-                </a>
-              
-            
-          </h1>
+                <a class="post-title-link" href="/2017/03/15/start-up-business/" itemprop="url">创业是场修行</a></h1>
         
 
         <div class="post-meta">
           <span class="post-time">
-            post.posted
-            <time itemprop="dateCreated" datetime="2017-03-15T11:04:36-07:00" content="2017-03-15">
-              2017-03-15
-            </time>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Veröffentlicht am</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-03-15T11:04:36-07:00">
+                2017-03-15
+              </time>
+            
+
+            
+
+            
           </span>
 
           
@@ -435,33 +653,51 @@
           
 
           
+          
+
+          
+
+          
+
+          
 
         </div>
       </header>
     
 
-
-    <div class="post-body">
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
 
       
       
 
       
         
-          <span itemprop="articleBody">
-            
-              <p>世俗的看来，一个入世，一个出世，彷佛南辕北辙；但从结果上，却极有可能更接近。</p>
+          
+            <p>世俗的看来，一个入世，一个出世，彷佛南辕北辙；但从结果上，却极有可能更接近。</p>
 <p>修行，大概是由4件事组成的：设定目标、执行、反思、调整。你要成罗汉、还是真人，都是一个目标。佛教虽然说不执于某个目标，但“不执”同样也是目标。我猜测“不执”的意思，并不是没有目标，而是你虽然有目标，但不要老惦念它，做好当下。就像一个跑者的目标是80公里，并没有必要老去想着80公里，放下心去跑就好。这跟创业就非常像了，你有理想是一回事，做好产品是另一回事，天天想着宏大的理想，并不能离地面半步。</p>
 <p>又跑题了，我想说的其实是反思和调整。人类大概最难的就是反思和调整，大多数人到了20岁以后，养成的第一护身符，大概就是“我没有错”。但是修行者跟创业者，最美妙的地方，就是你错了，就看得到，逃无可逃。佛祖苦行失败，意识到苦行错了，换个方式再悟；创业呢，人才跑了、钱没赚到、预期没达成，各种错误称得上层峦叠嶂，让你想说句，“此天亡我，非战之罪“，都惭愧说不出口。怎么办？反思自己的错误，试探、调整。</p>
 <p>世上的绝大多数工作，都可以推诿的。比如制度不行，领导不行，父母不行，伙伴不行，时机不行，这届群众不行。唯有创业和修行无处可推，只能时时存疑，处处自省。所以，创业是一个特别充分，不得不，重新认识自我，认识世界的过程；这难道不是修行的目的吗？</p>
 
-            
-          </span>
+          
         
       
     </div>
+    
+    
+    
+
+    
+
+    
+
+    
 
     <footer class="post-footer">
+      
+
       
 
       
@@ -471,6 +707,10 @@
         <div class="post-eof"></div>
       
     </footer>
+  </div>
+  
+  
+  
   </article>
 
 
@@ -478,13 +718,27 @@
       
 
   
-  
 
   
   
   
 
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://bigbowl.me/2017/02/16/pay-content/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="大碗">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="碗曰">
+    </span>
 
     
       <header class="post-header">
@@ -492,24 +746,27 @@
         
         
           <h1 class="post-title" itemprop="name headline">
-            
-            
-              
                 
-                <a class="post-title-link" href="/2017/02/16/pay-content/" itemprop="url">
-                  我的专利观以及内容付费这回事
-                </a>
-              
-            
-          </h1>
+                <a class="post-title-link" href="/2017/02/16/pay-content/" itemprop="url">我的专利观以及内容付费这回事</a></h1>
         
 
         <div class="post-meta">
           <span class="post-time">
-            post.posted
-            <time itemprop="dateCreated" datetime="2017-02-16T09:25:23-08:00" content="2017-02-16">
-              2017-02-16
-            </time>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Veröffentlicht am</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-02-16T09:25:23-08:00">
+                2017-02-16
+              </time>
+            
+
+            
+
+            
           </span>
 
           
@@ -519,22 +776,30 @@
           
 
           
+          
+
+          
+
+          
+
+          
 
         </div>
       </header>
     
 
-
-    <div class="post-body">
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
 
       
       
 
       
         
-          <span itemprop="articleBody">
-            
-              <p>我个人是反对用户为知识付费的，所以，本质上，我也反对专利。</p>
+          
+            <p>我个人是反对用户为知识付费的，所以，本质上，我也反对专利。</p>
 <blockquote>
 <p> “那样就没人研发新药了！”</p>
 <p>“你这种人永远看不到好的书，好的电影”</p>
@@ -548,13 +813,23 @@
 <p>还好，区块链技术和物联网的普及为这一切带来了可能性。</p>
 <p>知识应该免费。希望在我的有生之间，看到让知识像自来水一样，唾手可得。</p>
 
-            
-          </span>
+          
         
       
     </div>
+    
+    
+    
+
+    
+
+    
+
+    
 
     <footer class="post-footer">
+      
+
       
 
       
@@ -564,6 +839,10 @@
         <div class="post-eof"></div>
       
     </footer>
+  </div>
+  
+  
+  
   </article>
 
 
@@ -571,13 +850,27 @@
       
 
   
-  
 
   
   
   
 
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://bigbowl.me/2017/02/01/motivation/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="大碗">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="碗曰">
+    </span>
 
     
       <header class="post-header">
@@ -585,24 +878,27 @@
         
         
           <h1 class="post-title" itemprop="name headline">
-            
-            
-              
                 
-                <a class="post-title-link" href="/2017/02/01/motivation/" itemprop="url">
-                  反直觉
-                </a>
-              
-            
-          </h1>
+                <a class="post-title-link" href="/2017/02/01/motivation/" itemprop="url">反直觉</a></h1>
         
 
         <div class="post-meta">
           <span class="post-time">
-            post.posted
-            <time itemprop="dateCreated" datetime="2017-02-01T07:06:45-08:00" content="2017-02-01">
-              2017-02-01
-            </time>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Veröffentlicht am</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-02-01T07:06:45-08:00">
+                2017-02-01
+              </time>
+            
+
+            
+
+            
           </span>
 
           
@@ -612,22 +908,30 @@
           
 
           
+          
+
+          
+
+          
+
+          
 
         </div>
       </header>
     
 
-
-    <div class="post-body">
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
 
       
       
 
       
         
-          <span itemprop="articleBody">
-            
-              <p>做产品久了，就会发现大多数关于产品的错误都是来自直觉，而直觉是极不靠谱，原因大概有三个：</p>
+          
+            <p>做产品久了，就会发现大多数关于产品的错误都是来自直觉，而直觉是极不靠谱，原因大概有三个：</p>
 <ul>
 <li>人性里有相信眼见为实（相信当前的现实）而不相信道理的习惯；高利贷骗局多数利用了这一点</li>
 <li>人天性看重短期而轻视长期，表现在对短期过分乐观，对长期过分悲观；</li>
@@ -637,13 +941,23 @@
 <p>既然已经扯远了，不妨再扯远一点。直觉这件事，对重大事情的判断上靠谱性，大概比掷筛子还要低很多，危害比掷筛子要大很多。想想人民公社大跃进、纳粹的人类族群优化多半如此。 所以哈耶克说，通往地狱之路通常是由善意构成的。</p>
 <p>所谓善意，大抵就是直觉吧。所以，别觉得自己多牛逼，直觉无敌，不管你是谁，最好还是能静下来想想道理。</p>
 
-            
-          </span>
+          
         
       
     </div>
+    
+    
+    
+
+    
+
+    
+
+    
 
     <footer class="post-footer">
+      
+
       
 
       
@@ -653,6 +967,10 @@
         <div class="post-eof"></div>
       
     </footer>
+  </div>
+  
+  
+  
   </article>
 
 
@@ -660,13 +978,27 @@
       
 
   
-  
 
   
   
   
 
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://bigbowl.me/2016/12/27/android-things/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="大碗">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="碗曰">
+    </span>
 
     
       <header class="post-header">
@@ -674,24 +1006,27 @@
         
         
           <h1 class="post-title" itemprop="name headline">
-            
-            
-              
                 
-                <a class="post-title-link" href="/2016/12/27/android-things/" itemprop="url">
-                  android-things 闲扯
-                </a>
-              
-            
-          </h1>
+                <a class="post-title-link" href="/2016/12/27/android-things/" itemprop="url">android-things 闲扯</a></h1>
         
 
         <div class="post-meta">
           <span class="post-time">
-            post.posted
-            <time itemprop="dateCreated" datetime="2016-12-27T09:34:07-08:00" content="2016-12-27">
-              2016-12-27
-            </time>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Veröffentlicht am</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2016-12-27T09:34:07-08:00">
+                2016-12-27
+              </time>
+            
+
+            
+
+            
           </span>
 
           
@@ -701,22 +1036,30 @@
           
 
           
+          
+
+          
+
+          
+
+          
 
         </div>
       </header>
     
 
-
-    <div class="post-body">
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
 
       
       
 
       
         
-          <span itemprop="articleBody">
-            
-              <p>大公司，做平台，做未来，Google再一次做了成功的示范。</p>
+          
+            <p>大公司，做平台，做未来，Google再一次做了成功的示范。</p>
 <p>android-things解决三个问题：</p>
 <ul>
 <li>低功耗智能设备的操作系统（窗帘、马桶、冰箱、电饭煲）</li>
@@ -726,13 +1069,23 @@
 <p>管你是洗衣机公司、电视机公司，消防物联网公司、还是支架公司，都不需要高深的人才懂硬件，不需要高价的人才懂所谓的嵌入式开发，只要会Android，就能任意提供智能硬件，这才是物联网行业的电力公司、自来水公司啊。阿弥佗佛，希望国内各种物联网集团的老大看到这消息没有羞愧致死，骗了国家这么多补贴，也不知道拿来做什么了。</p>
 <p>麻痹的，国内的大公司倒好啊，一个个拿着足以做伟大平台的钱和资源，干着偷鸡摸狗欺负幼儿园小学生的事情，这届人民真心不行。</p>
 
-            
-          </span>
+          
         
       
     </div>
+    
+    
+    
+
+    
+
+    
+
+    
 
     <footer class="post-footer">
+      
+
       
 
       
@@ -742,6 +1095,10 @@
         <div class="post-eof"></div>
       
     </footer>
+  </div>
+  
+  
+  
   </article>
 
 
@@ -749,13 +1106,27 @@
       
 
   
-  
 
   
   
   
 
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://bigbowl.me/2016/10/08/no-trends/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="大碗">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="碗曰">
+    </span>
 
     
       <header class="post-header">
@@ -763,24 +1134,27 @@
         
         
           <h1 class="post-title" itemprop="name headline">
-            
-            
-              
                 
-                <a class="post-title-link" href="/2016/10/08/no-trends/" itemprop="url">
-                  创业勿妄谈潮流趋势
-                </a>
-              
-            
-          </h1>
+                <a class="post-title-link" href="/2016/10/08/no-trends/" itemprop="url">创业勿妄谈潮流趋势</a></h1>
         
 
         <div class="post-meta">
           <span class="post-time">
-            post.posted
-            <time itemprop="dateCreated" datetime="2016-10-08T18:57:45-07:00" content="2016-10-08">
-              2016-10-08
-            </time>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Veröffentlicht am</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2016-10-08T18:57:45-07:00">
+                2016-10-08
+              </time>
+            
+
+            
+
+            
           </span>
 
           
@@ -790,22 +1164,30 @@
           
 
           
+          
+
+          
+
+          
+
+          
 
         </div>
       </header>
     
 
-
-    <div class="post-body">
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
 
       
       
 
       
         
-          <span itemprop="articleBody">
-            
-              <p>前几天，跟两个朋友争论，说讨论趋势没意义。这个论断漏洞百出，自然是被突突的千疮百孔，举手认输。后来，反复琢磨着这件事，我觉得应该是逻辑不严谨所致，换个条件语句，可能就好了，大致应该是这样：</p>
+          
+            <p>前几天，跟两个朋友争论，说讨论趋势没意义。这个论断漏洞百出，自然是被突突的千疮百孔，举手认输。后来，反复琢磨着这件事，我觉得应该是逻辑不严谨所致，换个条件语句，可能就好了，大致应该是这样：</p>
 <ul>
 <li>有意义的趋势是不可知的（绝大多数人学习不到理解不了）</li>
 <li>可知的趋势没什么意义（因为太明显了）</li>
@@ -820,13 +1202,23 @@
 <p>有个打我脸的家伙说，切，你错透了，有很多朋友判断国家有发展物联网的趋势，就注册公司骗到很多政府的钱啊，一定有趋势的！</p>
 <p>你妈比！</p>
 
-            
-          </span>
+          
         
       
     </div>
+    
+    
+    
+
+    
+
+    
+
+    
 
     <footer class="post-footer">
+      
+
       
 
       
@@ -836,6 +1228,10 @@
         <div class="post-eof"></div>
       
     </footer>
+  </div>
+  
+  
+  
   </article>
 
 
@@ -843,13 +1239,27 @@
       
 
   
-  
 
   
   
   
 
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://bigbowl.me/2016/06/30/price-and-currency/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="大碗">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="碗曰">
+    </span>
 
     
       <header class="post-header">
@@ -857,24 +1267,27 @@
         
         
           <h1 class="post-title" itemprop="name headline">
-            
-            
-              
                 
-                <a class="post-title-link" href="/2016/06/30/price-and-currency/" itemprop="url">
-                  我看房价
-                </a>
-              
-            
-          </h1>
+                <a class="post-title-link" href="/2016/06/30/price-and-currency/" itemprop="url">我看房价</a></h1>
         
 
         <div class="post-meta">
           <span class="post-time">
-            post.posted
-            <time itemprop="dateCreated" datetime="2016-06-30T02:25:47-07:00" content="2016-06-30">
-              2016-06-30
-            </time>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Veröffentlicht am</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2016-06-30T02:25:47-07:00">
+                2016-06-30
+              </time>
+            
+
+            
+
+            
           </span>
 
           
@@ -884,33 +1297,51 @@
           
 
           
+          
+
+          
+
+          
+
+          
 
         </div>
       </header>
     
 
-
-    <div class="post-body">
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
 
       
       
 
       
         
-          <span itemprop="articleBody">
-            
-              <p>疯狂印钞，抢夺老百姓资产的政府不是好政府；<br>放任房产成为投资品，跟明清时期的土地兼并一样，让地主豪绅更轻松占有老百姓财富的政府不是好政府；<br>让绝大多数资本都涌入房地产的政府，使得其他民营经济无钱可用的政府不是好政府；</p>
+          
+            <p>疯狂印钞，抢夺老百姓资产的政府不是好政府；<br>放任房产成为投资品，跟明清时期的土地兼并一样，让地主豪绅更轻松占有老百姓财富的政府不是好政府；<br>让绝大多数资本都涌入房地产的政府，使得其他民营经济无钱可用的政府不是好政府；</p>
 <p>不好的政府，搞不好经济；<br>经济搞不好，人民币会快速贬值；<br>人民币贬值，则以人民币衡量的房屋相对全球资产也会贬值；<br>有钱人不会傻呵呵的持续持有预期贬值的资产，会在一个恰当的时机置换成外币资产；<br>房价一定会由于抛售而下跌；</p>
 <p>房价的下跌时机，看美国和欧洲经济的增长，看越南、印度这些中国制造替代国的发展。实际是一个比赛谁跑的慢谁被熊吃掉的过程。如果人民币快速主动贬值到位，则无可避免的通货膨胀；如果不主动贬值到位，被动贬值风险更大。</p>
 <p>赌经济发展比其他国家速度快？呵呵，这样一个政府，你拿什么赌呢？</p>
 
-            
-          </span>
+          
         
       
     </div>
+    
+    
+    
+
+    
+
+    
+
+    
 
     <footer class="post-footer">
+      
+
       
 
       
@@ -920,6 +1351,10 @@
         <div class="post-eof"></div>
       
     </footer>
+  </div>
+  
+  
+  
   </article>
 
 
@@ -927,13 +1362,27 @@
       
 
   
-  
 
   
   
   
 
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://bigbowl.me/2016/06/29/simple-mistakes-about-startup/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="大碗">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="碗曰">
+    </span>
 
     
       <header class="post-header">
@@ -941,24 +1390,27 @@
         
         
           <h1 class="post-title" itemprop="name headline">
-            
-            
-              
                 
-                <a class="post-title-link" href="/2016/06/29/simple-mistakes-about-startup/" itemprop="url">
-                  知其不能是创业的关键
-                </a>
-              
-            
-          </h1>
+                <a class="post-title-link" href="/2016/06/29/simple-mistakes-about-startup/" itemprop="url">知其不能是创业的关键</a></h1>
         
 
         <div class="post-meta">
           <span class="post-time">
-            post.posted
-            <time itemprop="dateCreated" datetime="2016-06-29T22:00:17-07:00" content="2016-06-29">
-              2016-06-29
-            </time>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Veröffentlicht am</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2016-06-29T22:00:17-07:00">
+                2016-06-29
+              </time>
+            
+
+            
+
+            
           </span>
 
           
@@ -968,22 +1420,30 @@
           
 
           
+          
+
+          
+
+          
+
+          
 
         </div>
       </header>
     
 
-
-    <div class="post-body">
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
 
       
       
 
       
         
-          <span itemprop="articleBody">
-            
-              <p>前几天有人来谈判，大概就是三个意思：</p>
+          
+            <p>前几天有人来谈判，大概就是三个意思：</p>
 <ul>
 <li>技术不值钱</li>
 <li>关系才是价值</li>
@@ -993,13 +1453,23 @@
 <p>所以，好的合作者，必须先明了自己的不足，清楚的认识到价值不是单向的，是组合出来的，才有好的心态，有好的合作基础。我有个朋友，最早是把产品能力看的比什么都高，因为那是他的长项；后来才认识到，综合护城河才是王道啊。而护城河本质上，就是资源、技术、产品、商业模式的结合，勉强加一个——时间也算是护城河，但那个我们一般左右不了。</p>
 <p>所以，好的创业者，首先要知道，自己的优势，有多少不能，才能最终达到能的境。</p>
 
-            
-          </span>
+          
         
       
     </div>
+    
+    
+    
+
+    
+
+    
+
+    
 
     <footer class="post-footer">
+      
+
       
 
       
@@ -1009,11 +1479,14 @@
         <div class="post-eof"></div>
       
     </footer>
+  </div>
+  
+  
+  
   </article>
 
 
     
-
   </section>
 
   
@@ -1023,17 +1496,15 @@
 
 
 
+          </div>
+          
+
+
+          
+
         </div>
-
         
-
-
-        
-
-      </div>
-
-      
-        
+          
   
   <div class="sidebar-toggle">
     <div class="sidebar-toggle-line-wrap">
@@ -1044,63 +1515,72 @@
   </div>
 
   <aside id="sidebar" class="sidebar">
+    
     <div class="sidebar-inner">
 
       
 
       
 
-      <section class="site-overview sidebar-panel  sidebar-panel-active ">
-        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
-          <img class="site-author-image" src="//default_avatar.jpg" alt="大碗" itemprop="image"/>
-          <p class="site-author-name" itemprop="name">大碗</p>
-        </div>
-        <p class="site-description motion-element" itemprop="description">要想人莫知，除非己不帅</p>
-        <nav class="site-state motion-element">
-          <div class="site-state-item site-state-posts">
-            <a href="/">
-              <span class="site-state-item-count">50</span>
-              <span class="site-state-item-name">state.posts</span>
-            </a>
-          </div>
-
-          <div class="site-state-item site-state-categories">
+      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
-              <span class="site-state-item-count">0</span>
-              <span class="site-state-item-name">state.categories</span>
-              
+              <p class="site-author-name" itemprop="name">大碗</p>
+              <p class="site-description motion-element" itemprop="description">要想人莫知，除非己不帅</p>
           </div>
 
-          <div class="site-state-item site-state-tags">
+          <nav class="site-state motion-element">
+
             
-              <span class="site-state-item-count">3</span>
-              <span class="site-state-item-name">state.tags</span>
+              <div class="site-state-item site-state-posts">
               
-          </div>
+                <a href="/archives/">
+              
+                  <span class="site-state-item-count">50</span>
+                  <span class="site-state-item-name">Artikel</span>
+                </a>
+              </div>
+            
 
-        </nav>
+            
 
-        
-          <div class="feed-link motion-element">
-            <a href="/atom.xml" rel="alternate">
-              <i class="fa fa-rss"></i>
-              RSS
-            </a>
-          </div>
-        
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                
+                  <span class="site-state-item-count">3</span>
+                  <span class="site-state-item-name">Tags</span>
+                
+              </div>
+            
 
-        <div class="links-of-author motion-element">
+          </nav>
+
           
-        </div>
-
-        
-        
-
-        <div class="links-of-author motion-element">
+            <div class="feed-link motion-element">
+              <a href="/atom.xml" rel="alternate">
+                <i class="fa fa-rss"></i>
+                RSS
+              </a>
+            </div>
           
-        </div>
 
+          
+
+          
+          
+
+          
+          
+
+          
+
+        </div>
       </section>
+
+      
 
       
 
@@ -1108,74 +1588,191 @@
   </aside>
 
 
-      
+        
+      </div>
     </main>
 
     <footer id="footer" class="footer">
       <div class="footer-inner">
-        <div class="copyright" >
-  
-  &copy; 
-  <span itemprop="copyrightYear">2018</span>
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2018</span>
   <span class="with-love">
-    <i class="icon-next-heart fa fa-heart"></i>
+    <i class="fa fa-user"></i>
   </span>
   <span class="author" itemprop="copyrightHolder">大碗</span>
-</div>
 
-<div class="powered-by">
-  footer.powered
-</div>
-
-<div class="theme-info">
-  footer.theme -
-  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
-    NexT
-  </a>
+  
 </div>
 
 
+  <div class="powered-by">Erstellt mit  <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a></div>
 
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">Theme &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Muse</a> v5.1.4</div>
+
+
+
+
+        
+
+
+
+
+
+
+
+        
       </div>
     </footer>
 
-    <div class="back-to-top"></div>
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+
   </div>
 
-  <script type="text/javascript" src="//jquery/index.js?v=2.1.3"></script>
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
+
+
 
   
   
 
   
-    
-    
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
+
+
 
   
 
 
   
 
-  
-
-  <script type="text/javascript" src="//helpers.js?v="></script>
-  <script type="text/javascript" src="//velocity/velocity.min.js"></script>
-<script type="text/javascript" src="//velocity/velocity.ui.min.js"></script>
-
-<script type="text/javascript" src="//motion.js?v=" id="motion.global"></script>
 
 
-  <script type="text/javascript" src="//fastclick/lib/fastclick.min.js?v=1.0.6"></script>
-  <script type="text/javascript" src="//jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+	
+
+
+
+
 
   
 
-  <script type="text/javascript" src="//bootstrap.js"></script>
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
 
   
   
 
   
+
+  
+
   
 
 </body>
